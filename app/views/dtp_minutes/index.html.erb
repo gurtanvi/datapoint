@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Dtp minutes</h1>
+
+<div id="dtp_minutes">
+  <% @dtp_minutes.each do |dtp_minute| %>
+    <%= render dtp_minute %>
+    <p>
+      <%= link_to "Show this dtp minute", dtp_minute %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New dtp minute", new_dtp_minute_path %>

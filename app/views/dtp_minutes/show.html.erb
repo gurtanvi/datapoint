@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @dtp_minute %>
+
+<div>
+  <%= link_to "Edit this dtp minute", edit_dtp_minute_path(@dtp_minute) %> |
+  <%= link_to "Back to dtp minutes", dtp_minutes_path %>
+
+  <%= button_to "Destroy this dtp minute", @dtp_minute, method: :delete %>
+</div>

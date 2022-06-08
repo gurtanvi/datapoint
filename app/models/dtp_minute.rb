@@ -1,0 +1,2 @@
+class DtpMinute < ApplicationRecord
+end

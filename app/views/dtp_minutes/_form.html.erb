@@ -1,0 +1,17 @@
+<%= form_with(model: dtp_minute) do |form| %>
+  <% if dtp_minute.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(dtp_minute.errors.count, "error") %> prohibited this dtp_minute from being saved:</h2>
+
+      <ul>
+        <% dtp_minute.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
