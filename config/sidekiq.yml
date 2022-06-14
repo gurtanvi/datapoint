@@ -1,4 +1,4 @@
 :schedule:
   dtp_minute:
-    every: 1m  # Runs once per minute
-    class: DtpMinute
+    every: 10s  # Runs once per minute
+    class: Test123Job

@@ -1,8 +1,4 @@
-require 'sidekiq-scheduler'
-
 class DtpMinute < ApplicationRecord
-    
-    include Sidekiq::Worker
     before_create :retrieve_value 
     
     def retrieve_value
@@ -13,8 +9,6 @@ class DtpMinute < ApplicationRecord
         req = Net::HTTP::Get.new(uri)
         req['Authorization'] = "Token token=8fe569ac"
         req['Content-Type'] = "application/json"
-
-
         res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') do |http|
             http.request(req)
         end
